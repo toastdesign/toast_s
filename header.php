@@ -21,6 +21,10 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+	
+	<?php get_template_part('template-parts/content','testgrid'); ?>
+
+
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'toast_s' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
@@ -47,3 +51,5 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+
+

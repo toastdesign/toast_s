@@ -5,7 +5,7 @@ Author: Daniel Plinsinga
 Author URI: http://toastdesign.nl
 Description: Starter theme for Toast Design Projects
 Version: 1.0.0
-License: GNU General Public License v2 or later
+License: GNU General Public License v2 or later3
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: toast_s
 Tags:
@@ -21,86 +21,54 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
+1-Settings – used with preprocessors and contain font, colors definitions, etc.
+2-Tools – globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+3-Generic – reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
+4-Elements – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
+5-Objects – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+6-Components – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
+7-Trumps – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
 --------------------------------------------------------------*/
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
 
 /*--------------------------------------------------------------
-# Normalize
+# 1-Settings
 --------------------------------------------------------------*/
-@import "normalize";
+@import "1-settings/colors";
+@import "1-settings/typography";
+@import "1-settings/breakpoint-settings";
+@import "1-settings/grid-settings";
 
 /*--------------------------------------------------------------
-# Typography
+# 2-Tools
 --------------------------------------------------------------*/
-@import "typography/typography";
+@import "2-tools/breakpoints";
+@import "2-tools/flex-grid";
+
 
 /*--------------------------------------------------------------
-# Elements
+# 3-Generic
 --------------------------------------------------------------*/
-@import "elements/elements";
+@import "3-generic/normalize";
+@import "3-generic/reset";
+@import "3-generic/box-sizing";
 
 /*--------------------------------------------------------------
-# Forms
+# 4-Elements
 --------------------------------------------------------------*/
-@import "forms/forms";
 
 /*--------------------------------------------------------------
-# Navigation
+# 5-Objects
 --------------------------------------------------------------*/
-@import "navigation/navigation";
+@import "5-objects/grid";
+
 
 /*--------------------------------------------------------------
-# Accessibility
+# 6-Components
 --------------------------------------------------------------*/
-@import "modules/accessibility";
 
 /*--------------------------------------------------------------
-# Alignments
+# 7-Trumps
 --------------------------------------------------------------*/
-@import "modules/alignments";
+@import "7-trumps/grid-helpers";
 
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-@import "modules/clearings";
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-@import "site/site";
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-@import "modules/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-@import "media/media";
+@import "7-trumps/test";

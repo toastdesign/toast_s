@@ -1,12 +1,13 @@
-/*
+@charset "UTF-8";
+/*!
 Theme Name: toast_s
 Theme URI: http://underscores.me/
 Author: Daniel Plinsinga
 Author URI: http://toastdesign.nl
 Description: Starter theme for Toast Design Projects
 Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
+License: GNU General Public License v2 or later3
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: toast_s
 Tags:
 
@@ -17,879 +18,486 @@ toast_s is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
-
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-html {
-	font-family: sans-serif;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;
-}
-
-body {
-	margin: 0;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-	display: block;
-}
-
-audio,
-canvas,
-progress,
-video {
-	display: inline-block;
-	vertical-align: baseline;
-}
-
-audio:not([controls]) {
-	display: none;
-	height: 0;
-}
-
-[hidden],
-template {
-	display: none;
-}
-
-a {
-	background-color: transparent;
-}
-
-a:active,
-a:hover {
-	outline: 0;
-}
-
-abbr[title] {
-	border-bottom: 1px dotted;
-}
-
-b,
-strong {
-	font-weight: bold;
-}
-
-dfn {
-	font-style: italic;
-}
-
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
-}
-
-mark {
-	background: #ff0;
-	color: #000;
-}
-
-small {
-	font-size: 80%;
-}
-
-sub,
-sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sup {
-	top: -0.5em;
-}
-
-sub {
-	bottom: -0.25em;
-}
-
-img {
-	border: 0;
-}
-
-svg:not(:root) {
-	overflow: hidden;
-}
-
-figure {
-	margin: 1em 40px;
-}
-
-hr {
-	box-sizing: content-box;
-	height: 0;
-}
-
-pre {
-	overflow: auto;
-}
-
-code,
-kbd,
-pre,
-samp {
-	font-family: monospace, monospace;
-	font-size: 1em;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-	color: inherit;
-	font: inherit;
-	margin: 0;
-}
-
-button {
-	overflow: visible;
-}
-
-button,
-select {
-	text-transform: none;
-}
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	-webkit-appearance: button;
-	cursor: pointer;
-}
-
-button[disabled],
-html input[disabled] {
-	cursor: default;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-
-input {
-	line-height: normal;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-	box-sizing: border-box;
-	padding: 0;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-	height: auto;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
-}
-
-fieldset {
-	border: 1px solid #c0c0c0;
-	margin: 0 2px;
-	padding: 0.35em 0.625em 0.75em;
-}
-
-legend {
-	border: 0;
-	padding: 0;
-}
-
-textarea {
-	overflow: auto;
-}
-
-optgroup {
-	font-weight: bold;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-td,
-th {
-	padding: 0;
-}
-
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-textarea {
-	color: #404040;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	clear: both;
-}
-
-p {
-	margin-bottom: 1.5em;
-}
-
-dfn,
-cite,
-em,
-i {
-	font-style: italic;
-}
-
-blockquote {
-	margin: 0 1.5em;
-}
-
-address {
-	margin: 0 0 1.5em;
-}
-
-pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
-}
-
-code,
-kbd,
-tt,
-var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-}
-
-abbr,
-acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
-}
-
-mark,
-ins {
-	background: #fff9c0;
-	text-decoration: none;
-}
-
-big {
-	font-size: 125%;
-}
-
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-html {
-	box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
-}
-
-body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: "";
-}
-
-blockquote,
-q {
-	quotes: "" "";
-}
-
-hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
-}
-
-ul,
-ol {
-	margin: 0 0 1.5em 3em;
-}
-
-ul {
-	list-style: disc;
-}
-
-ol {
-	list-style: decimal;
-}
-
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
-}
-
-dt {
-	font-weight: bold;
-}
-
-dd {
-	margin: 0 1.5em 1.5em;
-}
-
-img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
-}
-
-figure {
-	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
-}
-
-table {
-	margin: 0 0 1.5em;
-	width: 100%;
-}
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, .8);
-	font-size: 12px;
-	font-size: 0.75rem;
-	line-height: 1;
-	padding: .6em 1em .4em;
-}
-
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
-}
-
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
-textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	padding: 3px;
-}
-
-select {
-	border: 1px solid #ccc;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="range"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="color"]:focus,
-textarea:focus {
-	color: #111;
-}
-
-textarea {
-	width: 100%;
-}
-
-/*--------------------------------------------------------------
-# Navigation
+1-Settings – used with preprocessors and contain font, colors definitions, etc.
+2-Tools – globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+3-Generic – reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
+4-Elements – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
+5-Objects – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+6-Components – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
+7-Trumps – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
-a {
-	color: royalblue;
-}
-
-a:visited {
-	color: purple;
-}
-
-a:hover,
-a:focus,
-a:active {
-	color: midnightblue;
-}
-
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover,
-a:active {
-	outline: 0;
-}
-
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-}
-
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.main-navigation li {
-	float: left;
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 1.5em;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul ul li {
-
-}
-
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
-}
-
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
-}
-
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-ancestor > a {
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}
-
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-/* Text meant only for screen readers. */
-.screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
-}
-
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
-}
-
-/* Do not show the outline on the skip link target. */
-#content[tabindex="-1"]:focus {
-	outline: 0;
-}
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
-}
-
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
-}
-
-.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-	content: "";
-	display: table;
-	table-layout: fixed;
-}
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-	clear: both;
-}
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widget {
-	margin: 0 0 1.5em;
-}
-
-/* Make sure select elements fit in widgets. */
-.widget select {
-	max-width: 100%;
-}
-
-/*--------------------------------------------------------------
-# Content
+# 1-Settings
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-## Posts and pages
+# 2-Tools
 --------------------------------------------------------------*/
-.sticky {
-	display: block;
-}
+/*--------------------------------------------------------------
+# 3-Generic
+--------------------------------------------------------------*/
+/* ========================================================================== Normalize.scss settings ========================================================================== */
+/** Includes legacy browser support IE6/7 Set to false if you want to drop support for IE6 and IE7 */
+/* Base ========================================================================== */
+/** 1. Set default font family to sans-serif. 2. Prevent iOS and IE text size adjust after device orientation change, without disabling user zoom. 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using `em` units. */
+html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
 
-.hentry {
-	margin: 0 0 1.5em;
-}
+/** Remove default margin. */
+body { margin: 0; }
 
-.byline,
-.updated:not(.published) {
-	display: none;
-}
+/* HTML5 display definitions ========================================================================== */
+/** Correct `block` display not defined for any HTML5 element in IE 8/9. Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox. Correct `block` display not defined for `main` in IE 11. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
-.single .byline,
-.group-blog .byline {
-	display: inline;
-}
+/** 1. Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3. 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera. */
+audio, canvas, progress, video { display: inline-block; /* 1 */ vertical-align: baseline; /* 2 */ }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
+/** Prevents modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
 
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
-}
+/** Address `[hidden]` styling not present in IE 8/9/10. Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22. */
+[hidden], template { display: none; }
+
+/* Links ========================================================================== */
+/** Remove the gray background color from active links in IE 10. */
+a { background-color: transparent; }
+
+/** Improve readability of focused elements when they are also in an active/hover state. */
+a:active, a:hover { outline: 0; }
+
+/* Text-level semantics ========================================================================== */
+/** Address styling not present in IE 8/9/10/11, Safari, and Chrome. */
+abbr[title] { border-bottom: 1px dotted; }
+
+/** Address style set to `bolder` in Firefox 4+, Safari, and Chrome. */
+b, strong { font-weight: bold; }
+
+/** Address styling not present in Safari and Chrome. */
+dfn { font-style: italic; }
+
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** Addresses styling not present in IE 8/9. */
+mark { background: #ff0; color: #000; }
+
+/** Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* Embedded content ========================================================================== */
+/** 1. Remove border when inside `a` element in IE 8/9/10. 2. Improves image quality when scaled in IE 7. */
+img { border: 0; }
+
+/** Correct overflow not hidden in IE 9/10/11. */
+svg:not(:root) { overflow: hidden; }
+
+/* Grouping content ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari. */
+figure { margin: 1em 40px; }
+
+/** Address differences between Firefox and other browsers. */
+hr { box-sizing: content-box; height: 0; }
+
+/** Contain overflow in all browsers. */
+pre { overflow: auto; }
+
+/** Address odd `em`-unit font size rendering in all browsers. Correct font family set oddly in IE 6, Safari 4/5, and Chrome. */
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+
+/* Forms ========================================================================== */
+/** Known limitation: by default, Chrome and Safari on OS X allow very limited styling of `select`, unless a `border` property is set. */
+/** 1. Correct color not being inherited. Known issue: affects color of disabled elements. 2. Correct font properties not being inherited. 3. Address margins set differently in Firefox 4+, Safari, and Chrome. 4. Improves appearance and consistency in all browsers. */
+button, input, optgroup, select, textarea { color: inherit; /* 1 */ font: inherit; /* 2 */ margin: 0; /* 3 */ }
+
+/** Address `overflow` set to `hidden` in IE 8/9/10/11. */
+button { overflow: visible; }
+
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera. Correct `select` style inheritance in Firefox. */
+button, select { text-transform: none; }
+
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. 4. Removes inner spacing in IE 7 without affecting normal text inputs. Known issue: inner spacing remains in IE 6. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+
+/** Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] { cursor: default; }
+
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+input { line-height: normal; }
+
+/** 1. Address box sizing set to `content-box` in IE 8/9/10. 2. Remove excess padding in IE 8/9/10. Known issue: excess padding remains in IE 6. */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** Fix the cursor style for Chrome's increment/decrement buttons. For certain `font-size` values of the `input`, it causes the cursor style of the decrement button to change from `default` to `text`. */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
+
+/** 1. Address `appearance` set to `searchfield` in Safari and Chrome. 2. Address `box-sizing` set to `border-box` in Safari and Chrome. */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ box-sizing: content-box; /* 2 */ }
+
+/** Remove inner padding and search cancel button in Safari and Chrome on OS X. Safari (but not Chrome) clips the cancel button when the search input has padding (and `textfield` appearance). */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/** 1. Correct `color` not being inherited in IE 8/9/10/11. 2. Remove padding so people aren't caught out if they zero out fieldsets. 3. Corrects text not wrapping in Firefox 3. 4. Corrects alignment displayed oddly in IE 6/7. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+
+/** Remove default vertical scrollbar in IE 8/9/10/11. */
+textarea { overflow: auto; }
+
+/** Don't inherit the `font-weight` (applied by a rule above). NOTE: the default cannot safely be changed in Chrome and Safari on OS X. */
+optgroup { font-weight: bold; }
+
+/* Tables ========================================================================== */
+/** Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
+
+td, th { padding: 0; }
+
+/* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126 License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after { content: ''; content: none; }
+
+q:before, q:after { content: ''; content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+* { box-sizing: border-box; }
 
 /*--------------------------------------------------------------
-## Comments
+# 4-Elements
 --------------------------------------------------------------*/
-.comment-content a {
-	word-wrap: break-word;
-}
+/*--------------------------------------------------------------
+# 5-Objects
+--------------------------------------------------------------*/
+.grid { display: inline-block; display: -ms-flexbox; display: -webkit-box; display: flex; *display: inline; zoom: 1; -ms-flex-wrap: wrap; flex-wrap: wrap; padding: 0; margin: 0; position: relative; width: 100%; max-width: 100%; letter-spacing: -0.31em !important; *letter-spacing: normal !important; word-spacing: -0.43em !important; list-style-type: none; }
 
-.bypostauthor {
-	display: block;
-}
+.grid:before, .grid:after { letter-spacing: normal; word-spacing: normal; white-space: normal; max-width: 100%; }
+
+.grid *:before, .grid *:after { letter-spacing: normal; word-spacing: normal; white-space: normal; }
+
+.grid .grid { -ms-flex: 1 1 auto; -webkit-box-flex: 1; flex: 1 1 auto; }
+
+.grid * { box-sizing: border-box; }
+
+.grid *:before, .grid *:after { box-sizing: border-box; }
+
+[class*="grid__col-"] { display: inline-block; display: -ms-flexbox; display: -webkit-box; display: flex; *display: inline; zoom: 1; -ms-flex-direction: column; -webkit-box-orient: vertical; -webkit-box-direction: normal; flex-direction: column; letter-spacing: normal; word-spacing: normal; white-space: normal; position: relative; width: 100%; vertical-align: top; padding: 1em 10px; }
+
+.grid__cell { position: relative; display: block; -ms-flex: 1 1 auto; -webkit-box-flex: 1; flex: 1 1 auto; }
+
+_:-ms-fullscreen, :root .grid__cell { width: 100%; }
+
+.grid__col-12 { width: 100%; *width: 99.9%; }
+
+.grid__col-11 { width: 91.6666666667%; *width: 91.5666666667%; }
+
+.grid__col-10 { width: 83.3333333333%; *width: 83.2333333333%; }
+
+.grid__col-9 { width: 75%; *width: 74.9%; }
+
+.grid__col-8 { width: 66.6666666667%; *width: 66.5666666667%; }
+
+.grid__col-7 { width: 58.3333333333%; *width: 58.2333333333%; }
+
+.grid__col-6 { width: 50%; *width: 49.9%; }
+
+.grid__col-5 { width: 41.6666666667%; *width: 41.5666666667%; }
+
+.grid__col-4 { width: 33.3333333333%; *width: 33.2333333333%; }
+
+.grid__col-3 { width: 25%; *width: 24.9%; }
+
+.grid__col-2 { width: 16.6666666667%; *width: 16.5666666667%; }
+
+.grid__col-1 { width: 8.3333333333%; *width: 8.2333333333%; }
+
+@media (min-width: 480px) { .grid__col-xs-12 { width: 100%; *width: 99.9%; }
+  .grid__col-xs-11 { width: 91.6666666667%; *width: 91.5666666667%; }
+  .grid__col-xs-10 { width: 83.3333333333%; *width: 83.2333333333%; }
+  .grid__col-xs-9 { width: 75%; *width: 74.9%; }
+  .grid__col-xs-8 { width: 66.6666666667%; *width: 66.5666666667%; }
+  .grid__col-xs-7 { width: 58.3333333333%; *width: 58.2333333333%; }
+  .grid__col-xs-6 { width: 50%; *width: 49.9%; }
+  .grid__col-xs-5 { width: 41.6666666667%; *width: 41.5666666667%; }
+  .grid__col-xs-4 { width: 33.3333333333%; *width: 33.2333333333%; }
+  .grid__col-xs-3 { width: 25%; *width: 24.9%; }
+  .grid__col-xs-2 { width: 16.6666666667%; *width: 16.5666666667%; }
+  .grid__col-xs-1 { width: 8.3333333333%; *width: 8.2333333333%; } }
+
+@media (min-width: 768px) { .grid__col-sm-12 { width: 100%; *width: 99.9%; }
+  .grid__col-sm-11 { width: 91.6666666667%; *width: 91.5666666667%; }
+  .grid__col-sm-10 { width: 83.3333333333%; *width: 83.2333333333%; }
+  .grid__col-sm-9 { width: 75%; *width: 74.9%; }
+  .grid__col-sm-8 { width: 66.6666666667%; *width: 66.5666666667%; }
+  .grid__col-sm-7 { width: 58.3333333333%; *width: 58.2333333333%; }
+  .grid__col-sm-6 { width: 50%; *width: 49.9%; }
+  .grid__col-sm-5 { width: 41.6666666667%; *width: 41.5666666667%; }
+  .grid__col-sm-4 { width: 33.3333333333%; *width: 33.2333333333%; }
+  .grid__col-sm-3 { width: 25%; *width: 24.9%; }
+  .grid__col-sm-2 { width: 16.6666666667%; *width: 16.5666666667%; }
+  .grid__col-sm-1 { width: 8.3333333333%; *width: 8.2333333333%; } }
+
+@media (min-width: 992px) { .grid__col-md-12 { width: 100%; *width: 99.9%; }
+  .grid__col-md-11 { width: 91.6666666667%; *width: 91.5666666667%; }
+  .grid__col-md-10 { width: 83.3333333333%; *width: 83.2333333333%; }
+  .grid__col-md-9 { width: 75%; *width: 74.9%; }
+  .grid__col-md-8 { width: 66.6666666667%; *width: 66.5666666667%; }
+  .grid__col-md-7 { width: 58.3333333333%; *width: 58.2333333333%; }
+  .grid__col-md-6 { width: 50%; *width: 49.9%; }
+  .grid__col-md-5 { width: 41.6666666667%; *width: 41.5666666667%; }
+  .grid__col-md-4 { width: 33.3333333333%; *width: 33.2333333333%; }
+  .grid__col-md-3 { width: 25%; *width: 24.9%; }
+  .grid__col-md-2 { width: 16.6666666667%; *width: 16.5666666667%; }
+  .grid__col-md-1 { width: 8.3333333333%; *width: 8.2333333333%; } }
+
+@media (min-width: 1200px) { .grid__col-lg-12 { width: 100%; *width: 99.9%; }
+  .grid__col-lg-11 { width: 91.6666666667%; *width: 91.5666666667%; }
+  .grid__col-lg-10 { width: 83.3333333333%; *width: 83.2333333333%; }
+  .grid__col-lg-9 { width: 75%; *width: 74.9%; }
+  .grid__col-lg-8 { width: 66.6666666667%; *width: 66.5666666667%; }
+  .grid__col-lg-7 { width: 58.3333333333%; *width: 58.2333333333%; }
+  .grid__col-lg-6 { width: 50%; *width: 49.9%; }
+  .grid__col-lg-5 { width: 41.6666666667%; *width: 41.5666666667%; }
+  .grid__col-lg-4 { width: 33.3333333333%; *width: 33.2333333333%; }
+  .grid__col-lg-3 { width: 25%; *width: 24.9%; }
+  .grid__col-lg-2 { width: 16.6666666667%; *width: 16.5666666667%; }
+  .grid__col-lg-1 { width: 8.3333333333%; *width: 8.2333333333%; } }
+
+@media (min-width: 1600px) { .grid__col-xl-12 { width: 100%; *width: 99.9%; }
+  .grid__col-xl-11 { width: 91.6666666667%; *width: 91.5666666667%; }
+  .grid__col-xl-10 { width: 83.3333333333%; *width: 83.2333333333%; }
+  .grid__col-xl-9 { width: 75%; *width: 74.9%; }
+  .grid__col-xl-8 { width: 66.6666666667%; *width: 66.5666666667%; }
+  .grid__col-xl-7 { width: 58.3333333333%; *width: 58.2333333333%; }
+  .grid__col-xl-6 { width: 50%; *width: 49.9%; }
+  .grid__col-xl-5 { width: 41.6666666667%; *width: 41.5666666667%; }
+  .grid__col-xl-4 { width: 33.3333333333%; *width: 33.2333333333%; }
+  .grid__col-xl-3 { width: 25%; *width: 24.9%; }
+  .grid__col-xl-2 { width: 16.6666666667%; *width: 16.5666666667%; }
+  .grid__col-xl-1 { width: 8.3333333333%; *width: 8.2333333333%; } }
+
+.grid__col-auto { -ms-flex: 1 0 0px; -webkit-box-flex: 1; flex: 1 0 0px; width: auto !important; max-width: 100%; }
+
+@media (min-width: 480px) { .grid__col-xs-auto { -ms-flex: 1 0 0px; -webkit-box-flex: 1; flex: 1 0 0px; width: auto !important; max-width: 100%; } }
+
+@media (min-width: 768px) { .grid__col-sm-auto { -ms-flex: 1 0 0px; -webkit-box-flex: 1; flex: 1 0 0px; width: auto !important; max-width: 100%; } }
+
+@media (min-width: 992px) { .grid__col-md-auto { -ms-flex: 1 0 0px; -webkit-box-flex: 1; flex: 1 0 0px; width: auto !important; max-width: 100%; } }
+
+@media (min-width: 1200px) { .grid__col-lg-auto { -ms-flex: 1 0 0px; -webkit-box-flex: 1; flex: 1 0 0px; width: auto !important; max-width: 100%; } }
+
+@media (min-width: 1600px) { .grid__col-xlg-auto { -ms-flex: 1 0 0px; -webkit-box-flex: 1; flex: 1 0 0px; width: auto !important; max-width: 100%; } }
+
+.grid--order-12 { -ms-flex-order: 12; -webkit-box-ordinal-group: 13; order: 12; }
+
+.grid--order-11 { -ms-flex-order: 11; -webkit-box-ordinal-group: 12; order: 11; }
+
+.grid--order-10 { -ms-flex-order: 10; -webkit-box-ordinal-group: 11; order: 10; }
+
+.grid--order-9 { -ms-flex-order: 9; -webkit-box-ordinal-group: 10; order: 9; }
+
+.grid--order-8 { -ms-flex-order: 8; -webkit-box-ordinal-group: 9; order: 8; }
+
+.grid--order-7 { -ms-flex-order: 7; -webkit-box-ordinal-group: 8; order: 7; }
+
+.grid--order-6 { -ms-flex-order: 6; -webkit-box-ordinal-group: 7; order: 6; }
+
+.grid--order-5 { -ms-flex-order: 5; -webkit-box-ordinal-group: 6; order: 5; }
+
+.grid--order-4 { -ms-flex-order: 4; -webkit-box-ordinal-group: 5; order: 4; }
+
+.grid--order-3 { -ms-flex-order: 3; -webkit-box-ordinal-group: 4; order: 3; }
+
+.grid--order-2 { -ms-flex-order: 2; -webkit-box-ordinal-group: 3; order: 2; }
+
+.grid--order-1 { -ms-flex-order: 1; -webkit-box-ordinal-group: 2; order: 1; }
+
+.grid--order-0 { -ms-flex-order: 0; -webkit-box-ordinal-group: 1; order: 0; }
+
+@media only screen and (min-width: 480px) { .grid--order-12-xs { -ms-flex-order: 12; -webkit-box-ordinal-group: 13; order: 12; }
+  .grid--order-11-xs { -ms-flex-order: 11; -webkit-box-ordinal-group: 12; order: 11; }
+  .grid--order-10-xs { -ms-flex-order: 10; -webkit-box-ordinal-group: 11; order: 10; }
+  .grid--order-9-xs { -ms-flex-order: 9; -webkit-box-ordinal-group: 10; order: 9; }
+  .grid--order-8-xs { -ms-flex-order: 8; -webkit-box-ordinal-group: 9; order: 8; }
+  .grid--order-7-xs { -ms-flex-order: 7; -webkit-box-ordinal-group: 8; order: 7; }
+  .grid--order-6-xs { -ms-flex-order: 6; -webkit-box-ordinal-group: 7; order: 6; }
+  .grid--order-5-xs { -ms-flex-order: 5; -webkit-box-ordinal-group: 6; order: 5; }
+  .grid--order-4-xs { -ms-flex-order: 4; -webkit-box-ordinal-group: 5; order: 4; }
+  .grid--order-3-xs { -ms-flex-order: 3; -webkit-box-ordinal-group: 4; order: 3; }
+  .grid--order-2-xs { -ms-flex-order: 2; -webkit-box-ordinal-group: 3; order: 2; }
+  .grid--order-1-xs { -ms-flex-order: 1; -webkit-box-ordinal-group: 2; order: 1; }
+  .grid--order-0-xs { -ms-flex-order: 0; -webkit-box-ordinal-group: 1; order: 0; } }
+
+@media only screen and (min-width: 768px) { .grid--order-12-sm { -ms-flex-order: 12; -webkit-box-ordinal-group: 13; order: 12; }
+  .grid--order-11-sm { -ms-flex-order: 11; -webkit-box-ordinal-group: 12; order: 11; }
+  .grid--order-10-sm { -ms-flex-order: 10; -webkit-box-ordinal-group: 11; order: 10; }
+  .grid--order-9-sm { -ms-flex-order: 9; -webkit-box-ordinal-group: 10; order: 9; }
+  .grid--order-8-sm { -ms-flex-order: 8; -webkit-box-ordinal-group: 9; order: 8; }
+  .grid--order-7-sm { -ms-flex-order: 7; -webkit-box-ordinal-group: 8; order: 7; }
+  .grid--order-6-sm { -ms-flex-order: 6; -webkit-box-ordinal-group: 7; order: 6; }
+  .grid--order-5-sm { -ms-flex-order: 5; -webkit-box-ordinal-group: 6; order: 5; }
+  .grid--order-4-sm { -ms-flex-order: 4; -webkit-box-ordinal-group: 5; order: 4; }
+  .grid--order-3-sm { -ms-flex-order: 3; -webkit-box-ordinal-group: 4; order: 3; }
+  .grid--order-2-sm { -ms-flex-order: 2; -webkit-box-ordinal-group: 3; order: 2; }
+  .grid--order-1-sm { -ms-flex-order: 1; -webkit-box-ordinal-group: 2; order: 1; }
+  .grid--order-0-sm { -ms-flex-order: 0; -webkit-box-ordinal-group: 1; order: 0; } }
+
+@media only screen and (min-width: 992px) { .grid--order-12-md { -ms-flex-order: 12; -webkit-box-ordinal-group: 13; order: 12; }
+  .grid--order-11-md { -ms-flex-order: 11; -webkit-box-ordinal-group: 12; order: 11; }
+  .grid--order-10-md { -ms-flex-order: 10; -webkit-box-ordinal-group: 11; order: 10; }
+  .grid--order-9-md { -ms-flex-order: 9; -webkit-box-ordinal-group: 10; order: 9; }
+  .grid--order-8-md { -ms-flex-order: 8; -webkit-box-ordinal-group: 9; order: 8; }
+  .grid--order-7-md { -ms-flex-order: 7; -webkit-box-ordinal-group: 8; order: 7; }
+  .grid--order-6-md { -ms-flex-order: 6; -webkit-box-ordinal-group: 7; order: 6; }
+  .grid--order-5-md { -ms-flex-order: 5; -webkit-box-ordinal-group: 6; order: 5; }
+  .grid--order-4-md { -ms-flex-order: 4; -webkit-box-ordinal-group: 5; order: 4; }
+  .grid--order-3-md { -ms-flex-order: 3; -webkit-box-ordinal-group: 4; order: 3; }
+  .grid--order-2-md { -ms-flex-order: 2; -webkit-box-ordinal-group: 3; order: 2; }
+  .grid--order-1-md { -ms-flex-order: 1; -webkit-box-ordinal-group: 2; order: 1; }
+  .grid--order-0-md { -ms-flex-order: 0; -webkit-box-ordinal-group: 1; order: 0; } }
+
+@media only screen and (min-width: 1200px) { .grid--order-12-lg { -ms-flex-order: 12; -webkit-box-ordinal-group: 13; order: 12; }
+  .grid--order-11-lg { -ms-flex-order: 11; -webkit-box-ordinal-group: 12; order: 11; }
+  .grid--order-10-lg { -ms-flex-order: 10; -webkit-box-ordinal-group: 11; order: 10; }
+  .grid--order-9-lg { -ms-flex-order: 9; -webkit-box-ordinal-group: 10; order: 9; }
+  .grid--order-8-lg { -ms-flex-order: 8; -webkit-box-ordinal-group: 9; order: 8; }
+  .grid--order-7-lg { -ms-flex-order: 7; -webkit-box-ordinal-group: 8; order: 7; }
+  .grid--order-6-lg { -ms-flex-order: 6; -webkit-box-ordinal-group: 7; order: 6; }
+  .grid--order-5-lg { -ms-flex-order: 5; -webkit-box-ordinal-group: 6; order: 5; }
+  .grid--order-4-lg { -ms-flex-order: 4; -webkit-box-ordinal-group: 5; order: 4; }
+  .grid--order-3-lg { -ms-flex-order: 3; -webkit-box-ordinal-group: 4; order: 3; }
+  .grid--order-2-lg { -ms-flex-order: 2; -webkit-box-ordinal-group: 3; order: 2; }
+  .grid--order-1-lg { -ms-flex-order: 1; -webkit-box-ordinal-group: 2; order: 1; }
+  .grid--order-0-lg { -ms-flex-order: 0; -webkit-box-ordinal-group: 1; order: 0; } }
+
+@media only screen and (min-width: 1600px) { .grid--order-12-xl { -ms-flex-order: 12; -webkit-box-ordinal-group: 13; order: 12; }
+  .grid--order-11-xl { -ms-flex-order: 11; -webkit-box-ordinal-group: 12; order: 11; }
+  .grid--order-10-xl { -ms-flex-order: 10; -webkit-box-ordinal-group: 11; order: 10; }
+  .grid--order-9-xl { -ms-flex-order: 9; -webkit-box-ordinal-group: 10; order: 9; }
+  .grid--order-8-xl { -ms-flex-order: 8; -webkit-box-ordinal-group: 9; order: 8; }
+  .grid--order-7-xl { -ms-flex-order: 7; -webkit-box-ordinal-group: 8; order: 7; }
+  .grid--order-6-xl { -ms-flex-order: 6; -webkit-box-ordinal-group: 7; order: 6; }
+  .grid--order-5-xl { -ms-flex-order: 5; -webkit-box-ordinal-group: 6; order: 5; }
+  .grid--order-4-xl { -ms-flex-order: 4; -webkit-box-ordinal-group: 5; order: 4; }
+  .grid--order-3-xl { -ms-flex-order: 3; -webkit-box-ordinal-group: 4; order: 3; }
+  .grid--order-2-xl { -ms-flex-order: 2; -webkit-box-ordinal-group: 3; order: 2; }
+  .grid--order-1-xl { -ms-flex-order: 1; -webkit-box-ordinal-group: 2; order: 1; }
+  .grid--order-0-xl { -ms-flex-order: 0; -webkit-box-ordinal-group: 1; order: 0; } }
 
 /*--------------------------------------------------------------
-# Infinite scroll
+# 6-Components
 --------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
-	display: block;
-}
-
 /*--------------------------------------------------------------
-# Media
+# 7-Trumps
 --------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
-}
+.grid--bleed [class*="grid__col-"] { padding: 0; }
 
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-	max-width: 100%;
-}
+.grid--wrap { -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-/*--------------------------------------------------------------
-## Captions
---------------------------------------------------------------*/
-.wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
-}
+.grid--no-wrap { -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
 
-.wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
+.grid--wrap-reverse { -ms-flex-wrap: wrap-reverse; flex-wrap: wrap-reverse; }
 
-.wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
-}
+.grid--direction-row { -ms-flex-direction: row; -webkit-box-orient: horizontal; -webkit-box-direction: normal; flex-direction: row; }
 
-.wp-caption-text {
-	text-align: center;
-}
+.grid--direction-row-reverse { -ms-flex-direction: row-reverse; -webkit-box-orient: horizontal; -webkit-box-direction: reverse; flex-direction: row-reverse; }
 
-/*--------------------------------------------------------------
-## Galleries
---------------------------------------------------------------*/
-.gallery {
-	margin-bottom: 1.5em;
-}
+.grid--direction-column { -ms-flex-direction: column; -webkit-box-orient: vertical; -webkit-box-direction: normal; flex-direction: column; }
 
-.gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
-}
+.grid--direction-column-reverse { -ms-flex-direction: column-reverse; -webkit-box-orient: vertical; -webkit-box-direction: reverse; flex-direction: column-reverse; }
 
-.gallery-columns-2 .gallery-item {
-	max-width: 50%;
-}
+.grid--align-start { -ms-flex-align: flex-start; -webkit-box-align: start; align-items: flex-start; }
 
-.gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
-}
+.grid--align-end { -ms-flex-align: flex-end; -webkit-box-align: end; align-items: flex-end; }
 
-.gallery-columns-4 .gallery-item {
-	max-width: 25%;
-}
+.grid--align-end [class*="grid__col-"] { vertical-align: bottom; }
 
-.gallery-columns-5 .gallery-item {
-	max-width: 20%;
-}
+.grid--align-center { -ms-flex-align: center; -webkit-box-align: center; align-items: center; }
 
-.gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
-}
+.grid--align-center [class*="grid__col-"] { vertical-align: middle; }
 
-.gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
-}
+.grid--align-baseline { -ms-flex-align: baseline; -webkit-box-align: baseline; align-items: baseline; }
 
-.gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
-}
+.grid--align-baseline [class*="grid__col-"] { vertical-align: baseline; }
 
-.gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
-}
+.grid--align-content-start { -ms-flex-line-pack: flex-start; align-content: flex-start; }
 
-.gallery-caption {
-	display: block;
-}
+.grid--align-content-end { -ms-flex-line-pack: flex-end; align-content: flex-end; }
+
+.grid--align-content-end [class*="grid__col-"] { vertical-align: bottom; }
+
+.grid--align-content-center { -ms-flex-line-pack: center; align-content: center; }
+
+.grid--align-content-space-between { -ms-flex-line-pack: space-between; align-content: space-between; }
+
+.grid--align-content-space-around { -ms-flex-line-pack: space-around; align-content: space-around; }
+
+.grid--align-self-stretch { -ms-flex-item-align: stretch; -webkit-align-self: stretch; -ms-grid-row-align: stretch; align-self: stretch; }
+
+.grid--align-self-start { -ms-flex-item-align: flex-start; -webkit-align-self: flex-start; align-self: flex-start; }
+
+.grid--align-self-end { -ms-flex-item-align: flex-end; -webkit-align-self: flex-end; align-self: flex-end; vertical-align: bottom; }
+
+.grid--align-self-center { -ms-flex-item-align: center; -webkit-align-self: center; -ms-grid-row-align: center; align-self: center; vertical-align: middle; }
+
+.grid--align-self-baseline { -ms-flex-item-align: baseline; -webkit-align-self: baseline; align-self: baseline; vertical-align: baseline; }
+
+.grid--justify-start { text-align: left; -ms-flex-pack: start; -webkit-box-pack: start; justify-content: flex-start; }
+
+.grid--justify-end { text-align: right; -moz-text-align-last: right; text-align-last: right; -ms-flex-pack: end; -webkit-box-pack: end; justify-content: flex-end; }
+
+.grid--justify-end .grid__cell, .grid--justify-end [class*="grid__col-"] { text-align: left; text-align: start; text-align: initial; -moz-text-align-last: left; -moz-text-align-last: start; -moz-text-align-last: initial; text-align-last: left; text-align-last: start; text-align-last: initial; }
+
+.grid--justify-center { text-align: center; -moz-text-align-last: center; text-align-last: center; -ms-flex-pack: center; -webkit-box-pack: center; justify-content: center; }
+
+.grid--justify-center .grid__cell, .grid--justify-center [class*="grid__col-"] { text-align: left; text-align: start; text-align: initial; -moz-text-align-last: left; -moz-text-align-last: start; -moz-text-align-last: initial; text-align-last: left; text-align-last: start; text-align-last: initial; }
+
+.grid--justify-space-between { text-align: justify; -moz-text-align-last: justify; text-align-last: justify; -ms-flex-pack: justify; -webkit-box-pack: justify; justify-content: space-between; }
+
+.grid--justify-space-between .grid__cell, .grid--justify-space-between [class*="grid__col-"] { text-align: left; text-align: start; text-align: initial; -moz-text-align-last: left; -moz-text-align-last: start; -moz-text-align-last: initial; text-align-last: left; text-align-last: start; text-align-last: initial; }
+
+.grid--justify-space-around { text-align: justify; -moz-text-align-last: justify; text-align-last: justify; -ms-flex-pack: justify; justify-content: space-around; }
+
+.grid--justify-space-around .grid__cell, .grid--justify-space-around [class*="grid__col-"] { text-align: left; text-align: start; text-align: initial; -moz-text-align-last: left; -moz-text-align-last: start; -moz-text-align-last: initial; text-align-last: left; text-align-last: start; text-align-last: initial; }
+
+.grid__col--bleed { padding: 0; }
+
+.grid__col--bleed-x { padding: 1em 0; }
+
+.grid__col--bleed-y { padding: 0 1em; }
+
+.grid__col--bg { background-repeat: no-repeat; background-position: center center; background-size: cover; padding-bottom: 50%; }
+
+.grid__cell--padding-sm { padding: 0.5em; }
+
+.grid__cell--padding-md { padding: 1em; }
+
+.grid__cell--padding-lg { padding: 2em; }
+
+.grid__cell-img { display: block; display: -ms-flexbox; display: -webkit-box; display: flex; -ms-flex: 0 0 auto; -webkit-box-flex: 0; flex: 0 0 auto; margin-left: 0; margin-right: 0; max-width: 100%; width: 100%; height: auto; }
+
+.grid__cell-footer { display: inline-block; display: -ms-flexbox; display: -webkit-box; display: flex; *display: inline; zoom: 1; width: 100%; margin-top: auto; }
+/*# sourceMappingURL=style.css.map */
